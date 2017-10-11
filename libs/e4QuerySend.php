@@ -53,8 +53,8 @@ class e4QuerySend
 	protected function queryGoogle()
 	{
 		$this->requestService = 'Google Finance';
-		$response = $this->app->sendHTTPRequest('http://www.google.com/finance/converter?'.http_build_query(array(
-			'a' => $this->amount,
+        $response = $this->app->sendHTTPRequest('https://finance.google.com/finance/converter?'.http_build_query(array(
+            'a' => $this->amount,
 			'from' => $this->from,
 			'to' => $this->to)), null, 300);
 
